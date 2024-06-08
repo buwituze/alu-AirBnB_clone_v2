@@ -8,7 +8,7 @@ from fabric.api import put
 from fabric.api import run
 
 
-env.hosts = ['18.209.49.232', '54.89.11.80']
+env.hosts = ['3.90.186.168', '54.235.51.228']
 
 
 def do_pack():
@@ -34,9 +34,8 @@ def do_deploy(archive_path):
         Args:
         archive_path (str): path to the archive to be distributed
         Return:
-        False - if the file at the path archive_path doesn't exist
-        True - otherwise
-    """
+        False -file at the path archive_path doesn't exist
+        True - file exists  """
     if os.path.isfile(archive_path) is False:
         return False
     file = archive_path.split("/")[-1]
